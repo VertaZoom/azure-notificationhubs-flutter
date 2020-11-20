@@ -75,7 +75,7 @@
   } else {
     [_channel invokeMethod:@"onMessage" arguments:notification.request.content.userInfo];
   }
-  completionHandler(UNAuthorizationOptionBadge | UNAuthorizationOptionSound);
+  completionHandler(UNAuthorizationOptionBadge | UNAuthorizationOptionSound | UNAuthorizationOptionAlert);
 }
 
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void(^)(void))completionHandler {
